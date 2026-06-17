@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Geography Quiz</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <meta name="description" content="Play World Geography Quiz online. Test your knowledge of world flags, capitals, countries and continents with fun geography quizzes.">
+    <meta name="keywords" content="world geography quiz, flag quiz, capital quiz, continent quiz, countries quiz, geography game, world flags quiz, capitals of the world, country flags, country names, country capitals, countries, continents, geography trivia, online geography quiz"> 
+    <meta name="author" content="Neeraj Pattem">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<div class="container">
+
+    <img src="logo.png" alt="World Geography Quiz Logo" class="site-logo">
+    <p class="subtitle">
+    Test your knowledge of world flags, capitals and continents
+    </p>
+
+<div id="home-screen">
+
+    <button class="quiz-card" id="flag-quiz">
+        ▶ Flag Quiz
+    </button>
+
+    <button class="quiz-card" id="capital-quiz">
+        ▶ Capital Quiz
+    </button>
+
+    <button class="quiz-card" id="continent-quiz">
+        ▶ Continent Quiz
+    </button>
+
+</div>
+
+<div id="quiz-screen" style="display:none;">
+
+    <h2 id="quiz-title"></h2>
+
+    <p id="question-number">
+        Question #1
+    </p>
+
+    <p class="score-board">
+        Correct: <span id="correct-count">0</span>
+        |
+        Wrong: <span id="wrong-count">0</span>
+    </p>
+
+    <img
+        id="question-image"
+        alt="Question Image"
+    >
+
+    <h3 id="question-text">
+        Which country does this flag belong to?
+    </h3>
+
+    <div id="answer-container">
+
+        <button class="answer-btn">Option 1</button>
+        <button class="answer-btn">Option 2</button>
+        <button class="answer-btn">Option 3</button>
+        <button class="answer-btn">Option 4</button>
+
+    </div>
+
+    <button id="quit-btn">
+        Quit Quiz
+    </button>
+
+</div>
+
+
+<div id="results-screen" style="display:none;">
+
+    <h2 id="results-title">🎉 Quiz Completed </h2>
+
+    <div class="results-grid">
+
+    <div class="result-card">
+         <p>Questions</p>
+        <span id="results-total">0</span>
+    </div>
+
+    <div class="result-card">
+    <p>Correct</p>
+    <span id="results-correct" class="correct-stat">0</span>
+    </div>
+
+    <div class="result-card">
+    <p>Wrong</p>
+    <span id="results-wrong" class="wrong-stat">0</span>
+    </div>
+
+    <div class="result-card">
+    <p>Accuracy</p>
+    <span id="results-accuracy" class="accuracy-stat">0%</span>
+    </div>
+
+</div>
+
+    <button id="play-again-btn">
+        Play Again
+    </button>
+
+    <button id="home-btn">
+        Home
+    </button>
+
+</div>
+
+
+</div>
+
+<footer id="site-footer">
+     
+    
+  <h3 class="section-title">⭐ Rate This Quiz</h3>
+
+    <div id="star-rating">
+
+        <span class="star" data-rating="1">★</span>
+        <span class="star" data-rating="2">★</span>
+        <span class="star" data-rating="3">★</span>
+        <span class="star" data-rating="4">★</span>
+        <span class="star" data-rating="5">★</span>
+
+    </div>
+
+    <p id="averageRating">
+        Average Rating: 0 / 5
+    </p>
+
+    <p id="totalRatings">
+        Total Ratings: 0
+    </p>
+
+    <h3 class="visitor-title">👥 Total Visitors</h3>
+
+    <p id="visitorCount">0</p>
+
+    <h3 class="section-title">✉️ Feedback</h3>
+
+    <div class="feedback-form">
+
+    <input
+        type="text"
+        id="feedbackName"
+        placeholder="Your Name"
+    >
+
+    <textarea
+        id="feedbackMessage"
+        placeholder="Your Feedback"
+    ></textarea>
+
+    <button id="submitFeedback">
+        ➤ Send
+    </button>
+
+    </div>
+    <hr>
+
+    <p>
+        © 2026 World Geography Quiz
+    </p>
+
+    <p>
+        Countries, flags, capitals and continents are based on
+        United Nations member and observer states.
+    </p>
+
+    <p>
+        Developed by Neeraj Pattem
+    </p>
+
+    <p class="social-links">
+
+    <a href="https://neerajpattem.vercel.app/"
+       target="_blank">
+       <i class="fa-solid fa-globe"></i>
+       Website
+    </a>
+
+    <a href="https://x.com/NeerajPattem"
+       target="_blank">
+       <i class="fa-brands fa-x-twitter"></i>
+       Twitter
+    </a>
+
+    <a href="https://www.instagram.com/neerajpattem"
+       target="_blank">
+       <i class="fa-brands fa-instagram"></i>
+       Instagram
+    </a>
+
+    <a href="https://www.youtube.com/@neerajpattem"
+       target="_blank">
+       <i class="fa-brands fa-youtube"></i>
+       YouTube
+    </a>
+
+    </p>
+
+</footer>
+
+<script src="data/countries.js"></script>
+<script type="module" src="firebase.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
